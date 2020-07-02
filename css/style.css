@@ -1,0 +1,93 @@
+@font-face {
+	font-family: LMSans-regular;
+	src: url("fonts/lmsans10-regular.otf") format("opentype");
+}
+
+* {
+    font-family: 'LMSans-regular';
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-image: url("../imgs/background.png");
+    width: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    color: darkgreen;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: darkgreen;
+}
+.nav_item a:hover {
+	text-decoration: none;
+    color: rgb(14, 82, 14);
+    text-shadow: black 1px 0 20px;
+}
+
+a:hover {
+	text-decoration: none;
+    color: rgb(7, 56, 7);
+}
+
+#box_name {
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.nav_item {
+    padding-right: 3em;
+    padding-left: 3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+    .nav_text:hover {
+        transform-origin: top right;
+        -webkit-transform:scale(1.1);
+    }
+}
+
+
+.content {
+    min-height: 100%;
+    margin: 0 auto -6em;
+}
+
+.footer, .push {
+  height: 5em;
+  text-align: center;
+}
+
+.icon_links {
+    padding: 1em;
+    width: 5em;
+}
+
+.icon_links:hover {
+    transform-origin: center;
+    -webkit-transform:scale(1.1);
+}
+
+
