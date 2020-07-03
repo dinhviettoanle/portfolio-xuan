@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/style.css" >
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/e187f86b13.js" crossorigin="anonymous"></script>
+        
+
+        <script>
+
+            $(document).ready(function () {
+                $('#head').hover(function () {
+                    $('#menu').show("slide", {direction: "left" }, "slow");
+                    }, function () {
+                    $('#menu').hide("slide", {direction: "left" }, "slow");
+                });
+            });
+
+        </script>
+
+        <title> Animation </title>
+
+    </head>
+
+    <body>
+        
+        <div class="content">
+            <div class="row align-items-center ml-3" id="head">
+                <div class="col-2" id="title">
+                    <h2 class="title_link">Animation</h2>
+                </div>
+                <div class="col-9" id="menu" style="display: none;">
+                    <a href="../index.html" class="menu_item">Home</a>    
+                    <a href="../illustration/illustration.html" class="menu_item">Illustration</a>
+                    <a href="../video_games/video_games.html" class="menu_item">Video Games</a>
+                    <a href="../about.html" class="menu_item">About</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/sir.needleworth/"><img class="icon_links" alt="instagram_icon" src="../imgs/instagram_icon.png"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCkx8kuD7bFMF7bNQQ9i8J1w"><img class="icon_links" alt="instagram_icon" src="../imgs/youtube_icon.png"></a>
+        </div>
+
+        
+        
+        
+    </body>
+
+</html>
