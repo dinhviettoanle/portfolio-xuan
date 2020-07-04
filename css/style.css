@@ -70,7 +70,7 @@ a:hover {
 
 .icon_links:hover {
     transform-origin: center;
-    -webkit-transform:scale(1.1);
+    transform: scale(1.1);
 }
 
 
@@ -92,13 +92,13 @@ a:hover {
 @media only screen and (min-width: 768px) {
     .nav_text:hover {
         transform-origin: top right;
-        -webkit-transform:scale(1.1);
+        transform: scale(1.1);
     }
 }
 
 /* PAGES MENU */
 #head {
-    margin: 1em;
+    padding: 1em;
 }
 .title_link:hover {
     cursor: pointer;
@@ -108,7 +108,8 @@ a:hover {
 }
 
 .menu_item {
-    padding-left: 3em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     font-size: 1.5em;
 }
 
@@ -119,4 +120,57 @@ a:hover {
 }
 
 
+/* CONTENT PAGE */
+
+#presentation {
+    margin: 1em;
+}
+
+.hover-img-box {
+    margin-right: 1em;
+    margin-left: 1em;
+    overflow: hidden;
+}
+.hover-img-box:hover .img-hover {
+    filter: brightness(30%);
+    opacity: 0.9;
+    transform: scale(1.1);
+
+}
+
+.hover-img-box:hover .mask {
+    opacity: 1;
+}
+
+.hover-img-box {
+    position: relative;
+}
+
+.img-hover {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+.mask {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-title {
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.text-description {
+    color: white;
+}
 
