@@ -53,14 +53,21 @@ a:hover {
     color: rgb(7, 56, 7);
 }
 
+@media only screen and (min-width: 768px) {
+    .content {
+        min-height: 100%;
+        margin: 0 auto -6em;
+    }
+}
+
 .content {
     min-height: 100%;
-    margin: 0 auto -6em;
+    /* margin: 0 auto -6em; */
 }
 
 .footer {
-  height: 5em;
-  text-align: center;
+    height: 5em;
+    text-align: center;
 }
 
 .icon_links {
