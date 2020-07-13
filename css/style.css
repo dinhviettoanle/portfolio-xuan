@@ -1,10 +1,10 @@
 @font-face {
-	font-family: LMSans-regular;
-	src: url("fonts/lmsans10-regular.otf") format("opentype");
+	font-family: Xuan-font;
+	src: url("fonts/xuanfont-regular.otf") format("opentype");
 }
 
 * {
-    font-family: 'LMSans-regular';
+    font-family: 'Xuan-font';
 }
 
 body, html {
@@ -134,6 +134,7 @@ a:hover {
 }
 
 .hover-img-box {
+    /* opacity: 0; */
     margin-right: 1em;
     margin-left: 1em;
     margin-bottom: 1em;
