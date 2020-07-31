@@ -9,10 +9,13 @@
 
 body, html {
     height: 100%;
+    scroll-behavior: smooth;
+
 }
 
 body {
     overflow-x: hidden;
+
 }
 
 #video_background {
@@ -156,6 +159,7 @@ a:hover {
     margin-left: 1em;
     margin-bottom: 1em;
     overflow: hidden;
+    box-shadow: 0px 0px 10px black;
 }
 .hover-img-box:hover .img-hover {
     filter: brightness(30%);
