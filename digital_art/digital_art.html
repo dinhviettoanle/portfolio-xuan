@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+        <link rel="stylesheet" href="../css/style.css">
+
+        <link rel="icon" href="../imgs/icon.png"/>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/e187f86b13.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+        <script src="../javascript/scripts.js"></script>
+
+        <!-- <script>
+            $(document).ready(function(){
+                $('#presentation .hover-img-box').each(function(i) {
+                    console.log("Hello");
+                    $(this).delay(i*600).animate({"opacity": "1"}, 1000);
+                });
+            });
+
+        </script> -->
+
+        <title> Digital Art | Xuan LE </title>
+
+    </head>
+
+    <body>
+        
+        <img id="image_background" src="../imgs/background_img.png">
+        
+        <div class="content">
+            <div class="row align-items-center ml-3" id="head">
+                <div class="col-md-5 col-lg-4 col-12 text-md-left text-center" id="title">
+                    <h2 class="title_link">DIGITAL ART</h2>
+                </div>
+                <div class="col-md-6 col-lg-8 col-12 text-md-left text-center" id="menu">
+                    <a href="../index.html" class="menu_item">home</a><span class="d-md-none d-inline"><br></span>
+                    <a href="../animation/animation.html" class="menu_item">animation</a><span class="d-lg-none d-inline"><br></span>
+                    <a href="../watercolor/watercolor.html" class="menu_item">watercolor</a><span class="d-md-none d-inline"><br></span>
+                    <a href="../video_games/video_games.html" class="menu_item">video games</a><span class="d-md-none d-inline"><br></span>
+                    <a href="../about.html" class="menu_item">about</a>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center" id="presentation">
+                <div class="hover-img-box">
+                    <a class="a-fancybox" data-fancybox="gallery" href="imgs/bucheron.jpg" title="Title" caption="Description">
+                        <img src="imgs_compressed/bucheron-min.jpg" class="img-hover" style="height:50vh">
+                        <div class="mask">
+                            <span class="text-title">Title<br></span>
+                            <span class="text-description"><p>Description</p></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hover-img-box">
+                    <a class="a-fancybox" data-fancybox="gallery" href="imgs/calin.png" title="Title" caption="Description">
+                        <img src="imgs_compressed/calin-min.jpg" class="img-hover" style="height:50vh">
+                        <div class="mask">
+                            <span class="text-title">Title<br></span>
+                            <span class="text-description"><p>Description</p></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hover-img-box">
+                    <a class="a-fancybox" data-fancybox="gallery" href="imgs/dungeon.png" title="Title" caption="Description">
+                        <img src="imgs_compressed/dungeon-min.jpg" class="img-hover" style="height:50vh">
+                        <div class="mask">
+                            <span class="text-title">Title<br></span>
+                            <span class="text-description"><p>Description</p></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hover-img-box">
+                    <a class="a-fancybox" data-fancybox="gallery" href="imgs/exhausted.png" title="Title" caption="Description">
+                        <img src="imgs_compressed/exhausted-min.jpg" class="img-hover" style="height:50vh">
+                        <div class="mask">
+                            <span class="text-title">Title<br></span>
+                            <span class="text-description"><p>Description</p></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hover-img-box">
+                    <a class="a-fancybox" data-fancybox="gallery" href="imgs/flat_knight.png" title="Title" caption="Description">
+                        <img src="imgs_compressed/flat_knight-min.png" class="img-hover" style="height:50vh">
+                        <div class="mask">
+                            <span class="text-title">Title<br></span>
+                            <span class="text-description"><p>Description</p></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hover-img-box">
+                    <a class="a-fancybox" data-fancybox="gallery" href="imgs/warrior.png" title="Title" caption="Description">
+                        <img src="imgs_compressed/warrior-min.jpg" class="img-hover" style="height:50vh">
+                        <div class="mask">
+                            <span class="text-title">Title<br></span>
+                            <span class="text-description"><p>Description</p></span>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>
+    
+    </body>
+
+</html>

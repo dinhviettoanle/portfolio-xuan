@@ -23,6 +23,7 @@ body {
     right: 0;
     bottom: 0;
     width: 100%;
+    z-index: -1;
 }
 
 #image_background {
@@ -40,7 +41,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     font-size: 5em;
-    text-shadow: black 1px 0 20px;
+    /* text-shadow: black 1px 0 20px; */
 }
 
 h2 {
@@ -80,7 +81,7 @@ a:hover {
 
 .footer {
     height: 5em;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .icon_links {
@@ -96,17 +97,17 @@ a:hover {
 
 /* HOME */
 #box_name {
-    padding: 1em;
-    padding-left: 3em;
+    padding: 2em;
+    padding-left: 5em;
     padding-right: 3em;
 }
 
 .nav_item {
-    padding-right: 3em;
+    padding-right: 4em;
     padding-left: 3em;
     padding-top: 1em;
     padding-bottom: 1em;
-    text-shadow: black 1px 0 20px;
+    /* text-shadow: black 1px 0 20px; */
 }
 
 
@@ -114,6 +115,11 @@ a:hover {
     .nav_text:hover {
         transform-origin: top right;
         transform: scale(1.1);
+    }
+
+    .nav_text:hover > a {
+        text-decoration: none;
+        color: rgb(80, 80, 80);
     }
 }
 
@@ -154,12 +160,11 @@ a:hover {
 }
 
 .hover-img-box {
-    /* opacity: 0; */
     margin-right: 1em;
     margin-left: 1em;
     margin-bottom: 1em;
     overflow: hidden;
-    box-shadow: 0px 0px 10px black;
+    border: solid 2px white;
 }
 .hover-img-box:hover .img-hover {
     filter: brightness(30%);
