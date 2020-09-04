@@ -21,6 +21,18 @@
         <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
         <script src="../javascript/scripts.js"></script>
 
+        <style>
+            #game_box {
+                height: 630px; 
+                width: 1100px; 
+                background-color: rgb(30, 19, 49); 
+                margin: 0 auto; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center;
+                cursor: pointer;
+            }
+        </style>
 
 
         <title> Video Games | Xuan LE </title>
@@ -114,18 +126,26 @@
                             </div>
                         </a>
                     </div>
-
-
                 </div>
+
+                
 
                 <div class="ml-3 mt-3">
                     <h3 class="ml-5 mt-3" style="text-shadow: black 1px 0 20px;">Play the game</h3>
                     <div class="row justify-content-center" id="presentation">
-                        <div style="text-align:center;width:100%;">
-                            <iframe src="./coal_of_duty/index.html" width="1100px" height="630px"></iframe>
+                        <div id="game_interactive" style="text-align:center;width:100%;">
+                            <div id="game_box">
+                                <img src="imgs/play.svg" width="30%" height="30%">
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <script>
+                    document.getElementById("game_box").addEventListener("click", function(){
+                        document.getElementById("game_interactive").innerHTML = '<iframe src="./coal_of_duty/index.html" width="1100px" height="630px"></iframe>';
+                    });
+                </script>
             </div>
 
 
