@@ -22,7 +22,7 @@
         <script src="../javascript/scripts.js"></script>
 
         <style>
-            #game_box {
+            #game_box, #game_load {
                 height: 630px; 
                 width: 1100px; 
                 background-color: rgb(30, 19, 49); 
@@ -31,9 +31,25 @@
                 justify-content: center; 
                 align-items: center;
                 cursor: pointer;
+                
+            }
+
+            #game_box > img {
+                transition: .5s;
+            }
+
+            #game_box:hover > img {
+                transform-origin: center;
+                transition: .5s;
+                transform: scale(1.15);
             }
         </style>
 
+        <script src="coal_of_duty/Build/UnityLoader.js"></script>
+
+        <script>
+            var is_loaded = false;
+        </script>
 
         <title> Coal of Duty | Xuan LE </title>
 
@@ -141,10 +157,30 @@
                     </div>
                 </div>
 
+
+
                 <script>
                     document.getElementById("game_box").addEventListener("click", function(){
-                        document.getElementById("game_interactive").innerHTML = '<iframe src="./coal_of_duty/index.html" width="1100px" height="630px" frameBorder="0"></iframe>';
-                    });
+                        // document.getElementById("game_interactive").innerHTML = '<iframe src="./coal_of_duty/index.html" width="1100px" height="630px" frameBorder="0"></iframe>';
+                        document.getElementById("game_interactive").innerHTML = '<div id="game_load"><div id="unityContainer" style="width: 1066px; height: 600px;"></div></div>';
+                        UnityLoader.instantiate("unityContainer", "coal_of_duty/Build/Coal Of Duty - Web.json");
+
+                        document.getElementById("game_load").addEventListener("DOMSubtreeModified", function(){
+                            unloadGame();
+                        });
+
+                        function unloadGame(){
+                            var n_children = document.getElementById('unityContainer').children.length;
+                            
+                            if(n_children == 3 && !is_loaded) { 
+                                is_loaded = true;
+                            }
+
+                            if(n_children == 2 && is_loaded) {
+                                document.getElementById("game_interactive").innerHTML = '<div id="game_box"><img src="imgs/play.svg" width="30%" height="30%"></div>';
+                            }
+                        }
+                    });  
                 </script>
             </div>
 
