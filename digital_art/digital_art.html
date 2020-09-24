@@ -21,18 +21,35 @@
         <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
         <script src="../javascript/scripts.js"></script>
 
-        <link rel="preload" as="image" href="imgs_compressed/bucheron-min.jpg">
-        <link rel="preload" as="image" href="imgs_compressed/calin-min.jpg">
-        <link rel="preload" as="image" href="imgs_compressed/dungeon-min.jpg">
-        <link rel="preload" as="image" href="imgs_compressed/exhausted-min.jpg">
-        <link rel="preload" as="image" href="imgs_compressed/flat_knight-min.png">
-        <link rel="preload" as="image" href="imgs_compressed/warrior-min.jpg">
+        <script src="../javascript/load_files.js"></script>
 
         <title> Digital Art | Xuan LE </title>
 
     </head>
 
     <body>
+        
+        <script>
+            var imagesNames = [
+                "bucheron", 
+                "brico",
+                "calin",
+                "chat_camping",
+                "dungeon",
+                "exhausted",
+                "flat_knight",
+                "movin_out",
+                "vaches",
+                "warrior"
+            ];
+            var imgsToPreload = [];
+            
+            for(i = 0 ; i < imagesNames.length ; i++) {
+                imgsToPreload.push(new Image());
+            }
+
+            preload();
+        </script>
         
         <img id="image_background" src="../imgs/background_img.png">
         
@@ -54,7 +71,7 @@
             <div class="row justify-content-center" id="presentation">
                 <div class="hover-img-box">
                     <a class="a-fancybox" data-fancybox="gallery" href="imgs/bucheron.jpg" title="Title" caption="Description">
-                        <img src="imgs_compressed/bucheron-min.jpg" class="img-hover" style="height:50vh">
+                        <img id="bucheron" src="../imgs/blank.jpg" class="img-hover" style="height:50vh">
                         <div class="mask">
                             <span class="text-title">Title<br></span>
                             <span class="text-description"><p>Description</p></span>
@@ -64,7 +81,7 @@
 
                 <div class="hover-img-box">
                     <a class="a-fancybox" data-fancybox="gallery" href="imgs/brico.png" title="Title" caption="Description">
-                        <img src="imgs_compressed/brico-min.jpg" class="img-hover" style="height:50vh">
+                        <img id="brico" src="../imgs/blank.jpg" class="img-hover" style="height:50vh">
                         <div class="mask">
                             <span class="text-title">Title<br></span>
                             <span class="text-description"><p>Description</p></span>
@@ -74,7 +91,7 @@
 
                 <div class="hover-img-box">
                     <a class="a-fancybox" data-fancybox="gallery" href="imgs/calin.png" title="Title" caption="Description">
-                        <img src="imgs_compressed/calin-min.jpg" class="img-hover" style="height:50vh">
+                        <img id="calin" src="../imgs/blank.jpg" class="img-hover" style="height:50vh">
                         <div class="mask">
                             <span class="text-title">Title<br></span>
                             <span class="text-description"><p>Description</p></span>
@@ -84,7 +101,7 @@
 
                 <div class="hover-img-box">
                     <a class="a-fancybox" data-fancybox="gallery" href="imgs/chat_camping.png" title="Title" caption="Description">
-                        <img src="imgs_compressed/chat_camping-min.jpg" class="img-hover" style="height:50vh">
+                        <img id="chat_camping" src="../imgs/blank.jpg" class="img-hover" style="height:50vh">
                         <div class="mask">
                             <span class="text-title">Title<br></span>
                             <span class="text-description"><p>Description</p></span>
@@ -94,7 +111,7 @@
 
                 <div class="hover-img-box">
                     <a class="a-fancybox" data-fancybox="gallery" href="imgs/dungeon.png" title="Title" caption="Description">
-                        <img src="imgs_compressed/dungeon-min.jpg" class="img-hover" style="height:50vh">
+                        <img id="dungeon" src="../imgs/blank.jpg" class="img-hover" style="height:50vh">
                         <div class="mask">
                             <span class="text-title">Title<br></span>
                             <span class="text-description"><p>Description</p></span>
@@ -104,7 +121,7 @@
 
                 <div class="hover-img-box">
                     <a class="a-fancybox" data-fancybox="gallery" href="imgs/exhausted.png" title="Title" caption="Description">
-                        <img src="imgs_compressed/exhausted-min.jpg" class="img-hover" style="height:50vh">
+                        <img id="exhausted" src="../imgs/blank.jpg" class="img-hover" style="height:50vh">
                         <div class="mask">
                             <span class="text-title">Title<br></span>
                             <span class="text-description"><p>Description</p></span>
@@ -114,7 +131,7 @@
 
                 <div class="hover-img-box">
                     <a class="a-fancybox" data-fancybox="gallery" href="imgs/flat_knight.png" title="Title" caption="Description">
-                        <img src="imgs_compressed/flat_knight-min.jpg" class="img-hover" style="height:50vh">
+                        <img id="flat_knight" src="../imgs/blank.jpg" class="img-hover" style="height:50vh">
                         <div class="mask">
                             <span class="text-title">Title<br></span>
                             <span class="text-description"><p>Description</p></span>
@@ -124,7 +141,7 @@
 
                 <div class="hover-img-box">
                     <a class="a-fancybox" data-fancybox="gallery" href="imgs/movin_out.png" title="Title" caption="Description">
-                        <img src="imgs_compressed/movin_out-min.jpg" class="img-hover" style="height:50vh">
+                        <img id="movin_out" src="../imgs/blank.jpg" class="img-hover" style="height:50vh">
                         <div class="mask">
                             <span class="text-title">Title<br></span>
                             <span class="text-description"><p>Description</p></span>
@@ -134,7 +151,7 @@
 
                 <div class="hover-img-box">
                     <a class="a-fancybox" data-fancybox="gallery" href="imgs/vaches.png" title="Title" caption="Description">
-                        <img src="imgs_compressed/vaches-min.jpg" class="img-hover" style="height:50vh">
+                        <img id="vaches" src="../imgs/blank.jpg" class="img-hover" style="height:50vh">
                         <div class="mask">
                             <span class="text-title">Title<br></span>
                             <span class="text-description"><p>Description</p></span>
@@ -144,7 +161,7 @@
 
                 <div class="hover-img-box">
                     <a class="a-fancybox" data-fancybox="gallery" href="imgs/warrior.png" title="Title" caption="Description">
-                        <img src="imgs_compressed/warrior-min.jpg" class="img-hover" style="height:50vh">
+                        <img id="warrior" src="../imgs/blank.jpg" class="img-hover" style="height:50vh">
                         <div class="mask">
                             <span class="text-title">Title<br></span>
                             <span class="text-description"><p>Description</p></span>
@@ -156,7 +173,10 @@
             </div>
 
         </div>
-    
+        
+        <script>
+            usePreloadedImages();
+        </script>
     </body>
 
 </html>
